@@ -3,4 +3,10 @@
   font-family: sans-serif;
   // TODO: update height
   min-height: 100vh;
+  text-align: center;
+  div {
+    width:fit-content;
+    padding: 50px;
+    margin: auto;
+  }
 }
