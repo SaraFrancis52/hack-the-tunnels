@@ -20,6 +20,11 @@ function Home() {
   return (
     <Page>
       <div className="home-page">
+      <div className="searchBar">
+      <form>
+        <input type="text" name="search" placeholder="Search..."></input>
+      </form>
+      </div>
         <h1 className="home-page__title">Home</h1>
         <h2 style={{marginLeft: "30px"}}>Products</h2>
         <div className="home-page__products">
