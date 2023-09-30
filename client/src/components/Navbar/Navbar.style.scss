@@ -3,3 +3,12 @@
   width: 100%;
   justify-content: space-between;
 }
+
+.button{
+  padding: 8px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+.button:active{
+  background: #e7bb86
+}
