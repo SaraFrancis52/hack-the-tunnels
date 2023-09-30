@@ -9,7 +9,9 @@ function Navbar() {
 
   return (
     <div className="navbar">
-      <img src="Logo_no_background2.png" alt="UPS Logo" className="logo"></img>
+      <div className="navbar__logo">
+        <img src="Logo_no_background2.png" alt="UPS Logo" className="logo" onClick={() => navigate("/")}></img>
+      </div>
       <div className="navbar__account">
         {loggedIn() === false ? (
           <>
