@@ -7,11 +7,14 @@ import "./Login.style.scss";
 function Login() {
   const [message, setMessage] = useState(null);
   const { loggedIn, login } = useAccountContext();
+  const [emailValue, setEmailValue] = useState("");
+  const [passValue, setPassValue] = useState("");
+
   const navigate = useNavigate();
 
   const attemptLogin = async () => {
     try {
-      const message = await login("admin@email.com", "password");
+      const message = await login(emailValue, passValue);
       setMessage(message);
     } catch (error) {
       console.log(error);
@@ -28,8 +31,16 @@ function Login() {
     <Page>
       <div className="login-page">
         <h1>Login</h1>
+        <label>Your email:</label>
+        <br></br>
+        <input id="email" type="email" name="email" onChange={e => setEmailValue(e.target.value)}></input>
+        <br></br>
+        <label>Your password:</label>
+        <br></br>
+        <input id="password" type="password" name="pass" onChange={e => setPassValue(e.target.value)}></input>
+        <br></br>
         <button onClick={() => attemptLogin()}>
-          Login (as user set in code)
+          Login
         </button>
         {message && <p>{message}</p>}
       </div>
