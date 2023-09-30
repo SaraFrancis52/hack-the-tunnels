@@ -10,7 +10,9 @@ interface ProviderProps {
 interface AccountProviderContextState {
   jwt?: string;
   loggedIn: () => boolean;
+  signedUp: () => boolean;
   login: (email: string, password: string) => Promise<string>;
+  signup: (email: string, password: string) => Promise<string>;
   logout: () => void;
 }
 
@@ -48,13 +50,29 @@ export function AccountProvider({ storedToken, children }: ProviderProps) {
     return "Succesfully Logged In!";
   };
 
+  const signup = async (email: string, password: string): Promise<string> => {
+    const json = await ServiceAPI.signup(email, password);
+
+    if (json.error !== null) {
+      return json.error;
+    }
+    storeJwt(json.data.token);
+    return "Succesfully Logged In!";
+  };
+
   const loggedIn = () => {
+    return token !== undefined;
+  };
+
+  const signedUp = () => {
     return token !== undefined;
   };
 
   const value = {
     jwt: token,
     login: login,
+    signup: signup,
+    signedUp: signedUp,
     loggedIn: loggedIn,
     logout: logout,
   };
