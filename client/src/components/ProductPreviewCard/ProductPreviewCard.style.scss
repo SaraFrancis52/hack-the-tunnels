@@ -1,15 +1,20 @@
 .product-preview-card {
-  font-family: sans-serif;
+  font-family: "Times New Roman", Times, serif;
+  border: 3px solid brown;
+  margin-bottom: 20px !important;
+  border-radius: 15px;
   &__title {
     font-style: bold;
-    color: green;
+    color: rgb(143, 87, 4)
   }
 
   &__description {
-    color: blue;
+    color: rgb(180, 114, 15);
   }
 
   &__image {
     width: 10rem;
+    border-radius: 10px;
+    border: 3px solid brown;
   }
 }
