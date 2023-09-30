@@ -44,7 +44,7 @@ function Checkout() {
         {message && <p>{message}</p>}
         {product && (
           <>
-            <h2>You are about to make an order with the following product:</h2>
+            <h2 style={{marginLeft: "20px"}}>You are about to make an order with the following product:</h2>
             <div className="checkout-page__product">
             <ProductPreviewCard
                 title={product.title}
