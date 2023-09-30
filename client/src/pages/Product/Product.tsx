@@ -26,20 +26,25 @@ function Product() {
   return (
     <Page>
       <div className="product-page">
+        
         {message && <p>{message}</p>}
         {product && (
           <>
-            <div className="product-page__product">
-              <h3>Title: {product.title}</h3>
-              <p>ID: {id}</p>
-              <p>Description: {product.description}</p>
+            <div className="product-column">
+              <img src={product.imageUrl} alt="product image" className="product-image"></img>
             </div>
-            <Link to={`/checkout/${product.id}`}>
-              <button>Buy Now</button>
-            </Link>
+            <div className="product-column">
+              <h2>Title: {product.title}</h2>
+              <p>Description: {product.description}</p>
+              <h4>Price: ${product.price}</h4>
+              <Link to={`/checkout/${product.id}`}>
+                <button className="buy-button">Buy Now</button>
+              </Link>
+            </div>
           </>
         )}
       </div>
+      
     </Page>
   );
 }
