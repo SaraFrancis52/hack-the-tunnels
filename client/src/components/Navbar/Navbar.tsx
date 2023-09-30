@@ -10,6 +10,9 @@ function Navbar() {
   return (
     <div className="navbar">
       <img src="Logo_no_background2.png" alt="UPS Logo" className="logo"></img>
+      <form>
+        <input type="text" name="search" placeholder="Search.."></input>
+      </form>
       <div className="navbar__account">
         {loggedIn() === false ? (
           <>
