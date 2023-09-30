@@ -21,8 +21,7 @@ function Home() {
     <Page>
       <div className="home-page">
         <h1 className="home-page__title">Home</h1>
-        <p>Hello World!</p>
-        <h2>Products:</h2>
+        <h2 style={{marginLeft: "30px"}}>Products</h2>
         <div className="home-page__products">
           {products.map((product) => (
             <Link to={`/products/${product.id}`} key={`${product.id}`} onClick={() => setCookie(product.title, product.id)}>
@@ -36,7 +35,7 @@ function Home() {
             </Link>
           ))}
         </div>
-        <h2>Recently Viewed Products</h2>
+        <h2 style={{marginLeft: "30px"}}>Recently Viewed Products</h2>
         <div className="home-page__products">
             {products.map((product) => (
               <Fragment key={product.id}>

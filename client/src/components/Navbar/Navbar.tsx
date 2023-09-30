@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useAccountContext } from "../../context";
 import "./Navbar.style.scss";
+import image from "../../../public/Logo_no_background2.png";
 
 function Navbar() {
   const { loggedIn, logout } = useAccountContext();
@@ -10,7 +11,7 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="navbar__logo">
-        <img src="Logo_no_background2.png" alt="UPS Logo" className="logo" onClick={() => navigate("/")}></img>
+        <img src={image} alt="UPS Logo" className="logo" onClick={() => navigate("/")}></img>
       </div>
       <form>
         <input type="text" name="search" placeholder="Search..."></input>
