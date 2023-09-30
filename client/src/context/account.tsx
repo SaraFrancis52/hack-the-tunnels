@@ -57,7 +57,7 @@ export function AccountProvider({ storedToken, children }: ProviderProps) {
       return json.error;
     }
     storeJwt(json.data.token);
-    return "Succesfully Logged In!";
+    return "Succesfully Signed Up!";
   };
 
   const loggedIn = () => {
