@@ -6,7 +6,9 @@ function Error(){
     return(
         <Page>
             <center className="error">404: Not Found</center>
+            <div className="photo">
             <center><img src={gif} alt="gif"/></center>
+            </div>
         </Page>
     )
 }

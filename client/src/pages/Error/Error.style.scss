@@ -1,4 +1,24 @@
 .error{
     font-size: 50px;
     margin: auto;
+
+    
 }
+
+
+.photo{
+    position: relative;
+    animation: photo 2s linear 0s infinite alternate;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    
+    @keyframes photo {
+    0%   {left:-100px; top:0px;}
+    25%  {left:200px; top:0px;}
+    50%  {left:200px; top:150px;}
+    75%  {left:-100px; top:150px;}
+    100% {left:-100px; top:0px;}
+    }
+}
+
+
