@@ -43,6 +43,7 @@ function SignUp() {
           <button className="button" onClick={() => api()}>
             Sign Up
           </button>
+          {message && <p>{message}</p>}
         </div>
     </Page>
   );
